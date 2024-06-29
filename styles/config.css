@@ -1,0 +1,106 @@
+#config-overlay{
+  text-align: center;
+}
+
+#config-overlay h2{
+  margin: 0.5rem 0;
+}
+
+.form-control{
+  margin: 0.5rem 0;
+}
+
+.form-control label{
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control input{
+  font: inherit;
+  border: 2px solid var(--light-border);
+  border-radius: 4px;
+  width: 65%;
+  padding: 0.35rem;
+  outline: none;
+}
+
+.error input{
+  border-color: var(--input-error-color);
+  background-color: var(--input-error-bg-color);
+}
+
+
+.error p, .error label{
+  color: var(--input-error-color);
+}
+
+#game-configuration{
+  margin: 3rem auto;
+  text-align: center;
+  width: 90%;
+  max-width: 40rem;
+}
+
+#game-configuration ol{
+  margin: 1rem auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+}
+
+#game-configuration .card-player{
+  text-align: center;
+  background-color: var(--card-player-bg-color);
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  width: 35%;
+  max-width: 20rem;
+}
+.card-player .btn-alt{
+  padding: 0.25rem 0.5rem;
+  position: relative;
+}
+.card-player .btn-alt::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 1px;
+  left: 50%;
+  bottom: 0;
+  background-color: var(--bg-regular-darker-color);
+  transition: all 0.2s ease-in;
+}
+
+.card-player .btn-alt:hover::before{
+  width: 100%;
+  left: 0;
+}
+
+.card-player .btn-alt:hover{
+  background-color: transparent;
+}
+
+.card-player h2{
+  font-size: 1rem;
+  margin: 0;
+
+}
+
+.card-player h3{
+  color: var(--main-heading-color);
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.card-player .player-symbol{
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--symbols-color-main);
+}

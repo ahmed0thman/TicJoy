@@ -1,0 +1,42 @@
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.3s ease-in, height 0.3s ease-out;
+}
+
+.msg-modal{
+  background-color: transparent
+}
+
+.modal-body{
+  margin: 50% auto;
+  width: 70%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.msg-modal .modal-body{
+  text-align: start;
+  padding: 0.25rem 1rem 1rem;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden{
+  height: 0;
+  opacity: 0;
+  display: block;
+}
+
+.modal.hidden .modal-body{
+  margin: -40rem auto;
+}

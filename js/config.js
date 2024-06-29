@@ -26,12 +26,22 @@ function savePLayerConfig(e){
   if(!playerName){
     formNameConfig.classList.add('error');
     nameErrorMsg.textContent = "Enter a valid Player Name!"
-    return
+    return;
   }
   else if(containsNumber(playerName)){
     formNameConfig.classList.add('error');
     nameErrorMsg.textContent = "Player Name can't contain numbers"
-    return
+    return;
+  }
+  if(playerToEdit === 'X' && playerName === players.O.name){
+    formNameConfig.classList.add('error');
+    nameErrorMsg.textContent = "This name was already set to PLayer 'O'!";
+    return;
+  }
+  if(playerToEdit === 'O' && playerName === players.X.name){
+    formNameConfig.classList.add('error');
+    nameErrorMsg.textContent = "This name was already set to PLayer 'X'!";
+    return;
   }
 
   const playerNameHeading = document.getElementById(`player-name-${playerToEdit}`);

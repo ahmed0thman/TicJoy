@@ -63,7 +63,6 @@ function clickedGameBlock(e){
   target.textContent = activePLayer.symbol
   target.classList.add('disabled');
   gameData[row][col] = activePLayer;
-  setActivePLayer();
   const gameResult = checkGameOver();
   roundNumber++;
   console.log(gameResult);
@@ -73,11 +72,14 @@ function clickedGameBlock(e){
   else if (gameResult === -1) {
     gameIsActive = false;
     openMsgModal('No Winner! Click  "Start New Game" to play again!')
+    return;
   }
   else{
     gameIsActive = false;
     showWinner(gameResult);
+    return;
   }
+  setActivePLayer();
 }
 
 function checkGameOver(){

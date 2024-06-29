@@ -67,6 +67,7 @@ function clickedGameBlock(e){
   roundNumber++;
   console.log(gameResult);
   if(gameResult === 0){
+    setActivePLayer();
     return
   }
   else if (gameResult === -1) {
@@ -79,7 +80,6 @@ function clickedGameBlock(e){
     showWinner(gameResult);
     return;
   }
-  setActivePLayer();
 }
 
 function checkGameOver(){
